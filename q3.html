@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="">
+        <li id="mylist">home</li>
+        <li id="mylist">about</li>
+        <li id="mylist">skills</li>
+        <li id="mylist">services</li>
+        <li id="mylist">contact</li>
+        <li>number</li>
+    </ul>
+    <script>
+        let li = document.querySelectorAll('li');
+        for(let i=0; i<li.length; i++){
+            console.log(li[i].textContent);
+        }
+    </script>
+</body>
+</html>

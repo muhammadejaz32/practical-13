@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        text-transform: capitalize;
+        background: rgb(118, 121, 97);
+      }
+      #div{
+        margin: 10% 25%;
+        border-radius: 10px;
+        padding:5% 0;
+        padding-left: 2%;
+        width: 40%;
+        box-shadow: 0 0 10px black;
+      }
+      li {
+        list-style-type:decimal;
+        font-size: 25px;
+        color: white;
+        margin-top: 3%;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      input {
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 20px;
+        background-color: lightblue;
+      }
+      button {
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        transition:0.5s ease;
+      }
+      button:hover{
+        background-color:lightcoral;
+        transform: scale(0.9);
+      }
+      span{
+        font-size: 25px;
+        color: red;
+      }
+      h1{
+        color: white;
+        text-transform: uppercase;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div">
+      <h1>append element</h1>
+      <input type="text" id="input" />
+      <button onclick="create()">create element</button><br>
+      <span id="message"></span>
+    </div>
+    <!-- script -->
+    <script>
+      let input = document.getElementById("input");
+      let message = document.getElementById("message");
+      let div1 = document.getElementById('div');
+      function create() {
+        const newelement = document.createElement("li");
+        let inputvalue = input.value;
+        if (inputvalue.trim() === "") {
+          message.textContent = "input is empty!";
+        } else {
+          newelement.textContent = input.value;
+          div1.appendChild(newelement);
+          input.value = " ";
+          message.textContent = " ";
+        }
+      }
+    </script>
+  </body>
+</html>

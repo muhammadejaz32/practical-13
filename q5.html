@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        div{
+            margin: 20% 30%;
+            background-color: blue;
+            padding: 3%;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black;
+        }
+        input{
+            outline: none;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            margin: auto;
+            font-size: 15px;
+        }
+        button{
+            outline: none;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            margin: auto;
+            font-size: 15px;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition:0.5s ease;
+        }
+        button:hover{
+          background-color: lightcyan;
+          transform: scale(0.9);
+        }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input1" /> <br><br>
+      <button id="btn" onclick="inputvalue()">read values</button>
+    </div>
+    <script>
+      function inputvalue() {
+        let btn = document.getElementById("btn");
+        let input1 = document.getElementById("input1");
+        if (input1.value === " ") {
+          console.log("deafult values");
+        } else {
+          console.log(input1.value);
+          input1.value = " ";
+        }
+      }
+    </script>
+  </body>
+</html>
